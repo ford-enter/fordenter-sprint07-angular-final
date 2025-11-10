@@ -8,22 +8,6 @@
   font-family: "inter", "arial", sans-serif;
 }
 
-.principal-menu-nav {
-  margin: 15px 25px;
-  user-select: none;
-  cursor: pointer;
-}
-
-#principal-menu-open {
-    font-size: 36px;
-}
-
-
-#principal-menu-close {
-  display: none;
-  font-size: 36px;
-}
-
 .principal-sistema {
   width: 40%;
   height: 50%;

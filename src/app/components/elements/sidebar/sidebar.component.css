@@ -1,0 +1,30 @@
+.principal-menu-nav {
+  user-select: none;
+  cursor: pointer;
+}
+
+#principal-menu-open {
+  margin: 15px 25px;
+  font-size: 36px;
+}
+
+#principal-menu-close {
+  margin: 20px 20px;
+  font-size: 36px;
+}
+
+.principal-menu-dashboard-on {
+  height: 100vh;
+  background-color: blue;
+  width: 20%;
+  display: none;
+}
+
+.principal-menu-opcoes {
+  list-style-type: none;
+  display: none;
+}
+
+.principal-menu-opcoes li {
+  margin: 20px 25px;
+}
