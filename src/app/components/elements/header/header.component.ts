@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  ativo = true;
+  ativo = false;
 
   mostrarSidebar() {
     this.ativo = !this.ativo;
