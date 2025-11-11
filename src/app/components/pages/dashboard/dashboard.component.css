@@ -27,7 +27,7 @@
 }
 
 .dashboard-principal-titulo {
-    margin: 20px;
+    margin: 10px;
     color: #0A4983;
 }
 
@@ -45,6 +45,7 @@
     background-color: hsl(0, 0%, 90%);
     border-bottom: 1px solid black;
     padding: 10px 25px;
+    font-weight: 400;
 }
 
 .dashboard-option {
@@ -67,7 +68,7 @@
 }
 
 .dashboard-principal-infos {
-    width: 100vw;
+    width: 100%;
 }
 
 .dashboard-principal-datas {
@@ -79,8 +80,19 @@
     border-bottom: 1px solid black;
     padding: 5px;
     background-color: #0A4983;
+    color: white;
 }
 
 .dashboard-principal-datas div {
     padding: 5px;
+}
+
+.dashboard-principal-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-principal-imagem-carro {
+    width: 70%;
 }
