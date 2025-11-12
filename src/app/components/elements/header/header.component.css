@@ -67,3 +67,12 @@
 .cabecalho-nav-close {
   color: black;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-list-item.ativo {
+  border-left: 5px solid orange;
+}
