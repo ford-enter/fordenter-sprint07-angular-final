@@ -1,6 +1,6 @@
 .principal {
     height: 100%;
-    width: 100%;
+    width: 100vw;
     display: flex;
 }
 
@@ -59,11 +59,13 @@
     transition: color 0.3s ease-in-out;
 }
 
-.secao-login-input:focus {
-    border: 1px solid #1b357e;
-    padding: 10px;
-    padding-left: 40px;
+.secao-login-usuario:focus-within .secao-login-icon,
+.secao-login-senha:focus-within .secao-login-icon {
+    color: #1b357e;
+    transition: color 0.2s ease-in-out;
 }
+
+
 
 .secao-login-input:focus::placeholder {
     color: #1b357e;

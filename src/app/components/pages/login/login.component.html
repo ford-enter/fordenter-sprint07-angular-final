@@ -12,15 +12,14 @@
                 </div>
                 <div class="secao-login-senha">
                     <input [type]= "mostrarSenha ? 'text' : 'password'"  placeholder="Digite sua senha" class="secao-login-input">
-
                     <span class="material-symbols-outlined secao-login-icon">lock</span>
                     
                     
                     <span class="material-symbols-outlined secao-login-eye" (click)="toggleSenha()">
                         @if (mostrarSenha) {
-                            visibility
-                        } @else {
                             visibility_off
+                        } @else {
+                            visibility
                         }
                     </span>
                 </div>

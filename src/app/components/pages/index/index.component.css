@@ -19,8 +19,8 @@
   background: rgba(255, 255, 255, 0.745);
   border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 
   border: 2px solid hsl(0, 0%, 60%);
 }
@@ -29,7 +29,7 @@
   color: hsl(0, 0%, 30%);
   font-size: 1.5em;
   padding: 15px 25px;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
 }
 
@@ -40,7 +40,7 @@
 
 .principal-sistema p {
   font-size: 1em;
-  color: black;
+  color: #1b357e;
   padding: 15px 25px;
   font-weight: 300;
 }
