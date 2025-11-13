@@ -5,7 +5,7 @@ import { DashboardComponent } from './components/pages/dashboard/dashboard.compo
 import { LoginComponent } from './components/pages/login/login.component';
 
 export const routes: Routes = [
-    {path: '', component: LoginComponent},
-    {path: 'index', component: IndexComponent},
-    {path: 'dashboard', component: DashboardComponent}
+    {path: '', component: LoginComponent, title: "Login"},
+    {path: 'index', component: IndexComponent, title: "Painel de Controle"},
+    {path: 'dashboard', component: DashboardComponent, title: "Dashboard"}
 ];
