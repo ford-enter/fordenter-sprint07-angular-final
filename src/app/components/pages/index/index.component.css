@@ -22,7 +22,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
-  border: 2px solid hsl(0, 0%, 60%);
+  border: 1px solid hsl(0, 0%, 60%);
 }
 
 .principal-sistema h3 {
@@ -34,7 +34,7 @@
 }
 
 .principal-sistema-divisoria {
-  border-bottom: 2px solid hsl(0, 0%, 60%);
+  border-bottom: 1px solid hsl(0, 0%, 60%);
   width: 100%;
 }
 
