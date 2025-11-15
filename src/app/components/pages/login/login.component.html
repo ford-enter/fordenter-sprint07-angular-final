@@ -1,35 +1,54 @@
 <body class="principal">
-    <section class="secao-imagem">
-        <img src="assets/img/ranger.png" alt="" class="secao-imagem-foto">
-    </section>
-    <section class="secao-login">
-        <div class="secao-login-container">
-            <img src="assets/img/ford.png" alt="" class="secao-login-logo">
-            <form action="#" class="secao-login-forms">
-                <div class="secao-login-usuario">
-                    <input type="text" placeholder="Digite seu usuário" class="secao-login-input">
-                    <span class="material-symbols-outlined secao-login-icon">person</span>
-                </div>
-                <div class="secao-login-senha">
-                    <input [type]= "mostrarSenha ? 'text' : 'password'"  placeholder="Digite sua senha" class="secao-login-input">
-                    <span class="material-symbols-outlined secao-login-icon">lock</span>
-                    
-                    
-                    <span class="material-symbols-outlined secao-login-eye" (click)="toggleSenha()">
-                        @if (mostrarSenha) {
-                            visibility_off
-                        } @else {
-                            visibility
-                        }
-                    </span>
-                </div>
-                <div
-                    class="form-check form-switch form-switch d-flex align-items-center justify-content-end gap-2 w-100">
-                    <label class="form-check-label" for="switchCheckChecked">Login automaticamente</label>
-                    <input class="form-check-input m-0" type="checkbox" role="switch" id="switchCheckChecked" checked>
-                </div>
-                <button class="secao-login-botao">Entrar</button>
-            </form>
+  <section class="secao-imagem">
+    <img src="assets/img/ranger.png" alt="" class="secao-imagem-foto" />
+  </section>
+  <section class="secao-login">
+    <div class="secao-login-container">
+      <img src="assets/img/ford.png" alt="" class="secao-login-logo" />
+      <form action="#" class="secao-login-forms">
+        <div class="secao-login-usuario">
+          <input
+            type="text"
+            placeholder="Digite seu usuário"
+            class="secao-login-input"
+            [(ngModel)]="nome"
+            name="nome"
+          />
+          <span class="material-symbols-outlined secao-login-icon">person</span>
         </div>
-    </section>
+        <div class="secao-login-senha">
+          <input
+            [type]="mostrarSenha ? 'text' : 'password'"
+            placeholder="Digite sua senha"
+            class="secao-login-input"
+            [(ngModel)]="senha"
+            name="senha"
+          />
+          <span class="material-symbols-outlined secao-login-icon">lock</span>
+
+          <span
+            class="material-symbols-outlined secao-login-eye"
+            (click)="toggleSenha()"
+          >
+            @if (mostrarSenha) { visibility_off } @else { visibility }
+          </span>
+        </div>
+        <div
+          class="form-check form-switch form-switch d-flex align-items-center justify-content-end gap-2 w-100"
+        >
+          <label class="form-check-label" for="switchCheckChecked"
+            >Login automaticamente</label
+          >
+          <input
+            class="form-check-input m-0"
+            type="checkbox"
+            role="switch"
+            id="switchCheckChecked"
+            checked
+          />
+        </div>
+        <button class="secao-login-botao" (click)="fazerLogin()">Entrar</button>
+      </form>
+    </div>
+  </section>
 </body>
