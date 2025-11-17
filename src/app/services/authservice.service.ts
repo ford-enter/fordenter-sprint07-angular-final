@@ -15,4 +15,12 @@ export class AuthserviceService {
     return this.http.post(this.apiUrl, {nome, senha});
   }
 
+  setAutenticado(status:boolean) {
+    this.autenticado = status;
+  }
+
+  isLoggedIn(): boolean {
+    return this.autenticado
+  }
+
 }

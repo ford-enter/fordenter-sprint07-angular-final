@@ -21,7 +21,7 @@ export class LoginComponent {
     this.authService.login(this.nome, this.senha).subscribe(
       (res) => {
         if (res && res.id) {
-          this.authService.autenticado = true;
+          this.authService.setAutenticado(true);
           console.log("Usuário autenticado!");
           this.router.navigate(['/index']);
         } else {
