@@ -8,7 +8,7 @@
     <div class="dashboard-principal-data">
       <h3 class="dashboard-principal-data-titulo">Veículo</h3>
       <div class="dashboard-principal-data-conteudo dashboard-option">
-        <select [(ngModel)]="veiculoSelecionado" (change)="atualizarDashboard()" name="carro">
+        <select [(ngModel)]="veiculoSelecionado" name="carro">
           <option></option>
           <option *ngFor="let v of veiculos" [ngValue]="v">{{ v.vehicle }}</option>
         </select>
@@ -20,7 +20,7 @@
       <div class="dashboard-principal-data-conteudo">
 
         @if (veiculoSelecionado; as v) {
-        <h3>{{v.volumetotal}}</h3>
+        <h3>{{v.volumetotal | number:'1.0-0'}}</h3>
         } @else {
         <h3>-</h3>
         }
@@ -32,7 +32,7 @@
       <h3 class="dashboard-principal-data-titulo">Conectados</h3>
       <div class="dashboard-principal-data-conteudo">
         @if (veiculoSelecionado; as v) {
-        <h3>{{v.connected}}</h3>
+        <h3>{{v.connected | number:'1.0-0'}}</h3>
         } @else {
         <h3>-</h3>
         }
@@ -44,7 +44,7 @@
       <h3 class="dashboard-principal-data-titulo">Update Software</h3>
       <div class="dashboard-principal-data-conteudo">
         @if (veiculoSelecionado; as v) {
-        <h3>{{v.softwareUpdates}}</h3>
+        <h3>{{v.softwareUpdates | number:'1.0-0'}}</h3>
         } @else {
         <h3>-</h3>
         }
@@ -65,28 +65,48 @@
     <div class="dashboard-principal-datas">
       <h3>Código-Vin</h3>
       <div>
-        <input type="text">
+        <input type="text" maxlength="20" placeholder="Digite o VIN" [(ngModel)]="vin" (ngModelChange)="onVinChange()">
       </div>
     </div>
     <div class="dashboard-principal-datas">
       <h3>Odômetro</h3>
-      <div>-</div>
+      @if (vehicleData) {
+        <div> {{vehicleData.odometro | number:'1.0-0'}}</div>
+      } @else {
+        <div>-</div>
+      }
     </div>
     <div class="dashboard-principal-datas">
       <h3>Nível de Combustível</h3>
-      <div>-</div>
+      @if (vehicleData) {
+        <div> {{vehicleData.nivelCombustivel | number:'1.0-0'}}</div>
+      } @else {
+        <div>-</div>
+      }
     </div>
     <div class="dashboard-principal-datas">
       <h3>Status</h3>
-      <div>-</div>
+      @if (vehicleData) {
+        <div> {{vehicleData.status}}</div>
+      } @else {
+        <div>-</div>
+      }
     </div>
     <div class="dashboard-principal-datas">
       <h3>Lat.</h3>
-      <div>-</div>
+      @if (vehicleData) {
+        <div> {{vehicleData.lat | number:'1.4-4' }}</div>
+      } @else {
+        <div>-</div>
+      }
     </div>
     <div class="dashboard-principal-datas">
       <h3>Long.</h3>
-      <div>-</div>
+      @if (vehicleData) {
+        <div> {{vehicleData.long | number:'1.4-4' }}</div>
+      } @else {
+        <div>-</div>
+      }
     </div>
   </section>
 </body>
