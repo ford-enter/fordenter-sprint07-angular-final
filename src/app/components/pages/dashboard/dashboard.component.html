@@ -9,7 +9,8 @@
       <h3 class="dashboard-principal-data-titulo">Veículo</h3>
       <div class="dashboard-principal-data-conteudo dashboard-option">
         <select [(ngModel)]="veiculoSelecionado" (change)="atualizarDashboard()" name="carro">
-          <option *ngFor="let v of veiculos" [ngValue]="v">{{ v.modelo }}</option>
+          <option></option>
+          <option *ngFor="let v of veiculos" [ngValue]="v">{{ v.vehicle }}</option>
         </select>
       </div>
     </div>
@@ -17,7 +18,12 @@
     <div class="dashboard-principal-data">
       <h3 class="dashboard-principal-data-titulo">Total de vendas</h3>
       <div class="dashboard-principal-data-conteudo">
+
+        @if (veiculoSelecionado; as v) {
+        <h3>{{v.volumetotal}}</h3>
+        } @else {
         <h3>-</h3>
+        }
         <p>Unid.</p>
       </div>
     </div>
@@ -25,7 +31,11 @@
     <div class="dashboard-principal-data">
       <h3 class="dashboard-principal-data-titulo">Conectados</h3>
       <div class="dashboard-principal-data-conteudo">
+        @if (veiculoSelecionado; as v) {
+        <h3>{{v.connected}}</h3>
+        } @else {
         <h3>-</h3>
+        }
         <p>Unid.</p>
       </div>
     </div>
@@ -33,20 +43,30 @@
     <div class="dashboard-principal-data">
       <h3 class="dashboard-principal-data-titulo">Update Software</h3>
       <div class="dashboard-principal-data-conteudo">
+        @if (veiculoSelecionado; as v) {
+        <h3>{{v.softwareUpdates}}</h3>
+        } @else {
         <h3>-</h3>
+        }
         <p>Unid.</p>
       </div>
     </div>
   </section>
 
   <section class="dashboard-principal-imagem">
-    <img src="" alt="" class="dashboard-principal-imagem-carro" />
+    @if (veiculoSelecionado; as v) {
+      <img src="{{v.img}}" alt="" class="dashboard-principal-imagem-carro" />
+    } @else {
+      <img src="" alt="" class="dashboard-principal-imagem-carro" />
+    }
   </section>
 
   <section class="dashboard-principal-infos">
     <div class="dashboard-principal-datas">
       <h3>Código-Vin</h3>
-      <div>-</div>
+      <div>
+        <input type="text">
+      </div>
     </div>
     <div class="dashboard-principal-datas">
       <h3>Odômetro</h3>

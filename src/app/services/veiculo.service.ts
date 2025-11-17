@@ -4,13 +4,13 @@ import { Observable } from 'rxjs';
 import { Veiculo } from '../models/veiculo.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class VeiculoService {
-  private apiUrl = "http://localhost:3001/vehicles";
+  private apiUrl = 'http://localhost:3001/vehicles';
 
-  constructor(private http:HttpClient) { }
-  getVeiculos(): Observable<Veiculo[]> {
-    return this.http.get<Veiculo[]>(this.apiUrl)
+  constructor(private http: HttpClient) {}
+  getVeiculos(): Observable<{ vehicles: Veiculo[] }> {
+    return this.http.get<{ vehicles: Veiculo[] }>(this.apiUrl);
   }
 }

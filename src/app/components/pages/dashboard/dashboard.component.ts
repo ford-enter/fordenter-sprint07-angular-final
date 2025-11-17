@@ -3,10 +3,11 @@ import { HeaderComponent } from '../../elements/header/header.component';
 import { Veiculo } from '../../../models/veiculo.model';
 import { VeiculoService } from '../../../services/veiculo.service';
 import { FormsModule } from "@angular/forms";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [HeaderComponent, FormsModule],
+  imports: [HeaderComponent, FormsModule, CommonModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
@@ -22,7 +23,7 @@ export class DashboardComponent {
   buscarVeiculo() {
     this.veiculoService.getVeiculos().subscribe(
       (dadosRecebidos) => {
-        this.veiculos = dadosRecebidos;
+        this.veiculos = dadosRecebidos.vehicles;
       },
       (erro) => {
         console.log("Erro na requisição API");

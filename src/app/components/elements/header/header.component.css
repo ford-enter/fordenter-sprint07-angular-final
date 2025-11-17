@@ -16,13 +16,9 @@
 }
 
 .cabecalho-nav-perfil {
-  width: 65px;
-  height: 65px;
-  border-radius: 100%;
-  background-image: url("../../../../../public/assets/img/perfil.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

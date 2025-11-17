@@ -69,10 +69,15 @@
     padding: 5px;
 }
 
+.dashboard-principal-datas div input {
+    width: 90%;
+}
+
 .dashboard-principal-imagem {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 40%;
 }
 
 .dashboard-principal-imagem-carro {
