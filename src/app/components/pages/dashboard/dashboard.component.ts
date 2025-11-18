@@ -45,6 +45,7 @@ export class DashboardComponent {
       (erro) => {
         if (erro.status === 400) {
           alert('VIN não encontrado!');
+          this.vin = ""
           return;
         }
       }
