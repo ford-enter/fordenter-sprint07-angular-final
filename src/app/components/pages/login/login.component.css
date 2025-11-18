@@ -111,3 +111,7 @@
     user-select: none;
     color: hsl(0, 0%, 50%);
 }
+
+.secao-login-erro {
+    width: 100%;
+}

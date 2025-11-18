@@ -5,7 +5,14 @@
   <section class="secao-login">
     <div class="secao-login-container">
       <img src="assets/img/ford.png" alt="" class="secao-login-logo" />
+
+      
       <form action="#" class="secao-login-forms">
+        <div *ngIf="mensagemDeErro" class="alert alert-danger d-flex align-items-center secao-login-erro"  role="alert">
+          <div>
+            {{mensagemDeErro}}
+          </div>
+        </div>
         <div class="secao-login-usuario">
           <input
             type="text"
