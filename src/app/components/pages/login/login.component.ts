@@ -31,7 +31,9 @@ export class LoginComponent {
       },
       (erro) => {
         if (erro.status === 401) {
-          this.mensagemDeErro = erro.error?.mensagem || "Usuário ou senha inválidos.";
+          this.mensagemDeErro = "Usuário ou senha inválidos.";
+        } else if (!this.nome || !this.senha) {
+          this.mensagemDeErro = "Preencha todos os campos."
         } else {
           this.mensagemDeErro = "Erro ao conectar com a API.";
         }
