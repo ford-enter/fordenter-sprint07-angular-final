@@ -4,13 +4,16 @@
     </nav>
 
     <div class="cabecalho-nav-perfil">
-        <span class="material-symbols-outlined">
+        <span class="material-symbols-outlined" (click)="toggleLogout()">
             person
         </span>
+        <div class="cabecalho-nav-perfil-logout" [ngClass]="{'ativo': ativoLogout, 'inativo': !ativoLogout}">
+            <button type="button" class="btn btn-danger" (click)="logout()">Sair</button>
+        </div>
     </div>
 </header>
 
-<div class="sidebar" [ngClass]="{'ativo': ativo, 'inativo': !ativo}">
+<div class="sidebar" [ngClass]="{'ativo': ativoDashboard, 'inativo': !ativoDashboard}">
 
     <span class="material-symbols-outlined cabecalho-nav-close" (click)="esconderSidebar()">close</span>
 

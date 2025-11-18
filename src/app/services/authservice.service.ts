@@ -23,4 +23,8 @@ export class AuthserviceService {
     return this.autenticado
   }
 
+  logout() {
+    this.autenticado = false;
+  }
+
 }

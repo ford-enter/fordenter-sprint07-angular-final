@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { AuthserviceService } from '../../../services/authservice.service';
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,24 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  ativo = false;
+  constructor(private authService:AuthserviceService, private router:Router) {}
+  public ativoDashboard = false;
+  public ativoLogout = false;
 
-  mostrarSidebar() {
-    this.ativo = !this.ativo;
+  mostrarSidebar(): void {
+    this.ativoDashboard = !this.ativoDashboard;
   }
 
-  esconderSidebar() {
-    this.ativo = false;
+  esconderSidebar(): void {
+    this.ativoDashboard = false;
+  }
+
+  toggleLogout() {
+    this.ativoLogout = !this.ativoLogout
+  }
+
+  logout(): void {
+    this.authService.autenticado = false;
+    this.router.navigate(['/'])
   }
 }
